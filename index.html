@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bella Vista Beachwear | Boardshorts</title>
+  <meta name="description" content="Publicidad editorial de surf y tienda de boardshorts inspirada en las revistas clásicas de los años 80 y 90." />
+
+  <!-- Google Fonts: Archivo Black, Bebas Neue, DM Serif Display y Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              DEFAULT: '#E8DDC5',
+              light: '#F4ECE0',
+              card: '#FAF6ED',
+            },
+            sand: {
+              DEFAULT: '#C6B18E',
+              light: '#DDD0B8',
+            },
+            brownvintage: '#806348',
+            browndark: '#493629',
+            blackworn: '#24211D',
+            olive: {
+              DEFAULT: '#77765A',
+              dark: '#585741',
+            }
+          },
+          fontFamily: {
+            headline: ['"Archivo Black"', 'sans-serif'],
+            condensed: ['"Bebas Neue"', 'sans-serif'],
+            serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#E8DDC5] text-[#24211D] antialiased selection:bg-[#806348] selection:text-[#FAF6ED]">
+
+  <!-- ================= ENCABEZADO CON LOGO OFICIAL ================= -->
+  <header class="sticky top-0 z-40 bg-[#E8DDC5]/95 backdrop-blur-sm border-b-2 border-[#493629]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 sm:h-22 flex items-center justify-between">
+      
+      <!-- Menú Móvil Botón -->
+      <button id="mobileMenuToggle" class="p-2 text-[#493629] lg:hidden" aria-label="Abrir navegación">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Logo Oficial (Imagen proporcionada por el usuario) -->
+      <div class="flex items-center">
+        <a href="#inicio" class="inline-flex items-center transition-transform hover:scale-[1.02]" title="Bella Vista Beachwear - Inicio">
+          <img 
+            src="assets/logo.png" 
+            onerror="if(!this.dataset.retried){this.dataset.retried=true;this.src='logo.png';}" 
+            alt="Bella Vista Beachwear" 
+            class="h-12 sm:h-14 md:h-16 w-auto object-contain"
+            loading="eager"
+          />
+        </a>
+      </div>
+
+      <!-- Navegación Principal -->
+      <nav class="hidden lg:flex items-center gap-8 font-bold text-xs uppercase tracking-wider text-[#493629]">
+        <a href="#inicio" class="hover:text-[#806348] transition-colors">Inicio</a>
+        <a href="#modelos" class="hover:text-[#806348] transition-colors">Modelos</a>
+        <a href="#combos" class="hover:text-[#806348] transition-colors">Combos</a>
+        <a href="#showroom" class="hover:text-[#806348] transition-colors">Showroom</a>
+        <a href="#contacto" class="hover:text-[#806348] transition-colors">Contacto</a>
+      </nav>
+
+      <!-- Carrito / Orden -->
+      <div class="flex items-center gap-3">
+        <button class="btn-open-cart flex items-center gap-2 bg-[#493629] hover:bg-[#806348] text-[#F4ECE0] px-3.5 py-2 text-xs font-bold uppercase tracking-wider transition-colors shadow-vintage-offset-sm">
+          <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Orden</span>
+          <span class="cart-count-badge hidden bg-[#806348] text-[#FAF6ED] px-1.5 py-0.2 text-[10px]">0</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t-2 border-[#493629] bg-[#E8DDC5] px-6 py-4 space-y-3 font-bold text-xs uppercase tracking-wider text-[#493629]">
+      <a href="#inicio" class="block py-1 hover:text-[#806348]">Inicio</a>
+      <a href="#modelos" class="block py-1 hover:text-[#806348]">Modelos</a>
+      <a href="#combos" class="block py-1 hover:text-[#806348]">Combos</a>
+      <a href="#showroom" class="block py-1 hover:text-[#806348]">Showroom</a>
+      <a href="#contacto" class="block py-1 hover:text-[#806348]">Contacto</a>
+    </div>
+  </header>
+
+  <!-- ================= PORTADA EDITORIAL VINTAGE SURF (AÑOS 80/90) ================= -->
+  <section id="inicio" class="relative py-10 sm:py-16 lg:py-20 border-b-2 border-[#493629] overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Composición Editorial Publicitaria -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        
+        <!-- Columna Izquierda: Mensaje y Acciones -->
+        <div class="lg:col-span-5 space-y-6 z-10">
+          <div class="inline-flex items-center gap-2">
+            <span class="badge-vintage-olive">SURF / BEACHWEAR</span>
+            <span class="font-condensed text-xs tracking-widest text-[#493629] font-bold">BELLA VISTA BEACHWEAR</span>
+          </div>
+
+          <h1 class="font-ad-headline text-4xl sm:text-5xl lg:text-6xl text-[#493629] leading-[0.92]">
+            BELLA VISTA<br />
+            <span class="text-[#806348]">BOARDSHORTS</span>
+          </h1>
+
+          <p class="text-stone-800 text-sm sm:text-base leading-relaxed font-medium max-w-md">
+            Boardshorts para el agua, el verano y los días de playa.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row gap-3">
+            <a href="#modelos" class="btn-vintage-primary text-center">
+              VER MODELOS
+            </a>
+            <a href="#combos" class="btn-vintage-outline text-center">
+              VER COMBOS
+            </a>
+          </div>
+
+          <!-- Microtexto estilo ficha de revista -->
+          <div class="pt-6 border-t border-[#C6B18E] flex items-center justify-between text-xs font-bold text-[#493629]">
+            <span>PRECIO: $30.000</span>
+            <span class="text-[#806348]">COMBOS: 3x $85.000 • 4x $110.000</span>
+          </div>
+        </div>
+
+        <!-- Columna Derecha: Marco Analógico con Fotografía Cálida -->
+        <div class="lg:col-span-7 relative flex justify-center py-6 sm:py-10">
+          
+          <div class="relative w-full max-w-lg">
+            
+            <!-- Marco de Fotografía Analógica Inclinado (-2.5 grados) con Tono Cálido -->
+            <div class="analog-photo-frame transform -rotate-2 sm:-rotate-3">
+              
+              <!-- Imagen analógica cálida sin celestes estridentes -->
+              <div class="relative aspect-[4/5] overflow-hidden bg-[#806348]">
+                <img 
+                  src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1200&q=80" 
+                  alt="Surfer en la playa al atardecer con boardshorts" 
+                  class="w-full h-full object-cover object-center"
+                />
+                
+                <!-- Filtro cálido de atardecer analógico -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#493629]/40 via-transparent to-[#806348]/20 pointer-events-none"></div>
+
+                <!-- Etiqueta sobre la fotografía -->
+                <div class="absolute top-3 right-3 bg-[#493629]/90 text-[#F4ECE0] font-condensed text-xs px-2 py-0.5 tracking-wider uppercase border border-[#C6B18E]">
+                  REGISTRO ANALÓGICO
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Placa superpuesta que rompe el marco inferior -->
+            <div class="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 transform rotate-1 sm:rotate-2 z-20 pointer-events-none">
+              <div class="bg-[#FAF6ED] border-2 border-[#493629] py-2 px-4 shadow-vintage-offset flex items-center gap-3">
+                <span class="w-2.5 h-2.5 bg-[#806348] rounded-full border border-[#493629]"></span>
+                <span class="font-ad-headline text-xs sm:text-sm text-[#493629] tracking-tight">BELLA VISTA BEACHWEAR</span>
+                <span class="text-[10px] font-condensed text-[#77765A] uppercase font-bold">BOARDSHORTS</span>
+              </div>
+            </div>
+
+            <!-- Sello Gráfico Editorial en la esquina derecha -->
+            <div class="absolute -bottom-8 -right-2 sm:-bottom-10 sm:-right-4 transform rotate-1 z-20">
+              <div class="bg-[#FAF6ED] border-2 border-[#493629] p-3 text-center shadow-vintage-offset">
+                <span class="font-serif text-[11px] italic tracking-widest block text-[#493629] leading-none mb-0.5">THE</span>
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight block text-[#493629] leading-none">BOARD</span>
+                <span class="font-serif text-xs font-semibold tracking-wider block text-[#493629] leading-none mt-0.5">SHORT</span>
+                <div class="w-full h-0.5 bg-[#493629] my-1.5"></div>
+                <span class="font-condensed text-[10px] tracking-widest text-[#806348] uppercase font-bold block">BELLA VISTA</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Pie de Anuncio Publicitario Editorial -->
+      <div class="mt-16 pt-4 border-t-2 border-[#493629] flex flex-col md:flex-row items-center justify-between gap-3 text-xs font-bold text-[#493629] uppercase tracking-wider font-condensed">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 bg-[#806348]"></span>
+          <span>BELLA VISTA BEACHWEAR</span>
+        </div>
+        <div>
+          <span>BELLA VISTA, BUENOS AIRES</span>
+        </div>
+        <div>
+          <span class="text-[#806348]">WHATSAPP: +54 9 11 7365-7992</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CATÁLOGO DE PRODUCTOS ================= -->
+  <section id="modelos" class="py-16 sm:py-20 border-b-2 border-[#493629]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Encabezado de la Sección Catálogo -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 pb-4 border-b-2 border-[#493629] gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="badge-vintage-stamp">COLECCIÓN</span>
+            <span class="font-condensed text-xs tracking-wider text-[#77765A] font-bold">LÁMINA DE PRODUCTO</span>
+          </div>
+          <h2 class="font-ad-headline text-3xl sm:text-4xl text-[#493629]">
+            Catálogo de Modelos
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm font-semibold text-stone-700">
+          Precio individual: <strong class="text-[#493629] text-base">$30.000</strong>. Seleccioná tu talle para coordinar tu orden.
+        </p>
+      </div>
+
+      <!-- Grilla de Modelos -->
+      <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Generado dinámicamente por js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= COMBOS DISPONIBLES (ESTILO CUPÓN EDITORIAL 80s) ================= -->
+  <section id="combos" class="py-16 sm:py-20 border-b-2 border-[#493629] bg-[#F4ECE0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-10 pb-4 border-b-2 border-[#493629]">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge-vintage-olive">PROMOCIONES</span>
+          <span class="font-condensed text-xs tracking-wider text-[#77765A] font-bold">COMPRA MÚLTIPLE</span>
+        </div>
+        <h2 class="font-ad-headline text-3xl sm:text-4xl text-[#493629]">
+          Combos Vigentes
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-700 mt-1 font-medium">
+          Podés combinar libremente distintos modelos y talles. El descuento se calcula automáticamente en el carrito sobre el total de unidades elegidas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        
+        <!-- Combo 3 -->
+        <div class="border-2 border-dashed border-[#493629] p-6 sm:p-8 bg-[#FAF6ED] flex flex-col justify-between shadow-vintage-offset">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-vintage-stamp">PROMO 3 UNIDADES</span>
+              <span class="font-bold text-xs uppercase text-[#806348]">AHORRÁS $5.000</span>
+            </div>
+            
+            <h3 class="font-ad-headline text-2xl sm:text-3xl text-[#493629] mb-2">
+              3 Boardshorts por $85.000
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed mb-6 font-medium">
+              Elegí 3 modelos a elección. Podés mezclar estampados y talles como quieras. Al sumar 3 unidades en el carrito, el precio se ajusta automáticamente a $85.000.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t-2 border-[#493629]">
+            <a href="#modelos" class="btn-vintage-primary w-full text-center text-xs">
+              Elegir 3 Modelos
+            </a>
+          </div>
+        </div>
+
+        <!-- Combo 4 -->
+        <div class="border-2 border-dashed border-[#493629] p-6 sm:p-8 bg-[#FAF6ED] flex flex-col justify-between shadow-vintage-offset">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="badge-vintage-olive">PROMO 4 UNIDADES</span>
+              <span class="font-bold text-xs uppercase text-[#806348]">AHORRÁS $10.000</span>
+            </div>
+            
+            <h3 class="font-ad-headline text-2xl sm:text-3xl text-[#493629] mb-2">
+              4 Boardshorts por $110.000
+            </h3>
+            
+            <p class="text-xs sm:text-sm text-stone-700 leading-relaxed mb-6 font-medium">
+              Llevate 4 modelos combinados a elección. Ideal para tener recambio o armar tu pack de temporada. El descuento se calcula solo en el carrito.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t-2 border-[#493629]">
+            <a href="#modelos" class="btn-vintage-dark w-full text-center text-xs">
+              Elegir 4 Modelos
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SHOWROOM ================= -->
+  <section id="showroom" class="py-16 sm:py-20 border-b-2 border-[#493629] bg-[#E8DDC5]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="border-2 border-[#493629] bg-[#FAF6ED] p-8 sm:p-12 max-w-3xl mx-auto text-center shadow-vintage-offset">
+        <span class="badge-vintage-stamp mb-3">ESPACIO FÍSICO</span>
+        <h2 class="font-ad-headline text-3xl sm:text-4xl text-[#493629] mb-4">
+          Showroom en Bella Vista
+        </h2>
+
+        <p class="text-sm sm:text-base text-stone-800 leading-relaxed mb-8 max-w-xl mx-auto font-medium">
+          Tenemos showroom en Bella Vista, Buenos Aires. Podés escribirnos por WhatsApp para conocer los modelos disponibles y coordinar una visita para probarte los boardshorts.
+        </p>
+
+        <a 
+          href="https://wa.me/5491173657992?text=Hola%20Bella%20Vista!%20Quiero%20consultar%20por%20los%20modelos%20disponibles%20y%20coordinar%20una%20visita%20al%20showroom." 
+          target="_blank" 
+          class="btn-vintage-primary text-xs sm:text-sm"
+        >
+          <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span>Consultar por WhatsApp (+54 9 11 7365-7992)</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PIE DE PÁGINA SIMPLE ================= -->
+  <footer id="contacto" class="bg-[#493629] text-[#FAF6ED] py-12 text-xs border-t-2 border-[#24211D]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-10 border-b border-[#806348]/40">
+        
+        <div class="md:col-span-5 space-y-3">
+          <a href="#inicio" class="inline-block">
+            <img 
+              src="assets/logo.png" 
+              onerror="if(!this.dataset.retried){this.dataset.retried=true;this.src='logo.png';}" 
+              alt="Bella Vista Beachwear" 
+              class="h-12 w-auto object-contain filter brightness-110"
+            />
+          </a>
+          <p class="text-[#E8DDC5] text-xs">
+            Showroom en Bella Vista, Buenos Aires.
+          </p>
+        </div>
+
+        <div class="md:col-span-3 space-y-2 font-bold uppercase tracking-wider">
+          <p class="text-[#C6B18E]">Navegación</p>
+          <div><a href="#inicio" class="text-[#E8DDC5] hover:text-white transition-colors">Inicio</a></div>
+          <div><a href="#modelos" class="text-[#E8DDC5] hover:text-white transition-colors">Modelos</a></div>
+          <div><a href="#combos" class="text-[#E8DDC5] hover:text-white transition-colors">Combos</a></div>
+          <div><a href="#showroom" class="text-[#E8DDC5] hover:text-white transition-colors">Showroom</a></div>
+        </div>
+
+        <div class="md:col-span-4 space-y-2">
+          <p class="font-bold uppercase tracking-wider text-[#C6B18E]">Contacto Directo</p>
+          <div>
+            <span class="text-[#E8DDC5]">WhatsApp: </span>
+            <a href="https://wa.me/5491173657992" target="_blank" class="text-white hover:underline font-mono font-bold">+54 9 11 7365-7992</a>
+          </div>
+          <div>
+            <span class="text-[#E8DDC5]">Instagram: </span>
+            <a href="https://instagram.com/bellavistabeachwear" target="_blank" class="text-white hover:underline">@bellavistabeachwear</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-6 text-[#C6B18E] text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-2">
+        <p>© 2026 Bella Vista Beachwear. Todos los derechos reservados.</p>
+        <span class="font-condensed tracking-wider">BELLA VISTA • BUENOS AIRES • ARGENTINA</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODAL DETALLE DE PRODUCTO ================= -->
+  <div id="productModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+    <div id="productModalBackdrop" class="modal-backdrop absolute inset-0"></div>
+
+    <div class="relative bg-[#FAF6ED] border-2 border-[#493629] max-w-2xl w-full z-10 max-h-[90vh] flex flex-col md:flex-row shadow-vintage-offset-lg">
+      <button id="closeProductModalBtn" class="absolute top-3 right-3 z-20 w-8 h-8 bg-[#493629] text-[#F4ECE0] flex items-center justify-center hover:bg-[#806348]">
+        <i data-lucide="x" class="w-4 h-4"></i>
+      </button>
+
+      <div class="md:w-1/2 bg-[#DDD0B8] relative aspect-square md:aspect-auto">
+        <img id="modalImage" src="" alt="Detalle" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="md:w-1/2 p-6 flex flex-col justify-between overflow-y-auto">
+        <div>
+          <span class="badge-vintage-stamp mb-2">MODELO</span>
+          <h3 id="modalTitle" class="font-ad-headline text-2xl text-[#493629] mt-1 mb-2"></h3>
+          <span id="modalPrice" class="font-ad-headline text-xl text-[#806348] block mb-4"></span>
+
+          <p id="modalDescription" class="text-xs text-stone-800 leading-relaxed mb-6 font-medium"></p>
+
+          <!-- Selector de Talle -->
+          <div class="mb-4">
+            <label class="font-bold text-xs text-[#493629] uppercase tracking-wider block mb-2">Elegí tu talle:</label>
+            <div id="modalSizesContainer" class="flex flex-wrap gap-2"></div>
+          </div>
+
+          <!-- Selector de Cantidad -->
+          <div class="mb-6">
+            <label class="font-bold text-xs text-[#493629] uppercase tracking-wider block mb-2">Cantidad:</label>
+            <div class="flex items-center border-2 border-[#493629] bg-white w-32">
+              <button type="button" onclick="changeModalQuantity(-1)" class="px-3 py-1 hover:bg-[#E8DDC5] font-bold text-sm">−</button>
+              <input type="text" id="modalQuantityInput" value="1" readonly class="w-full text-center font-bold text-xs focus:outline-none" />
+              <button type="button" onclick="changeModalQuantity(1)" class="px-3 py-1 hover:bg-[#E8DDC5] font-bold text-sm">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t-2 border-[#493629]">
+          <button id="modalAddToCartBtn" class="btn-vintage-primary w-full text-xs">
+            Agregar a la Orden
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= DRAWER DEL CARRITO ================= -->
+  <div id="cartOverlay" class="fixed inset-0 z-50 opacity-0 pointer-events-none transition-opacity duration-200"></div>
+
+  <aside id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full sm:w-[410px] z-50 transform translate-x-full flex flex-col">
+    <!-- Header Carrito -->
+    <div class="p-4 border-b-2 border-[#493629] bg-[#E8DDC5] flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-4 h-4 text-[#493629]"></i>
+        <h3 class="font-ad-headline text-sm text-[#493629]">Tu Orden</h3>
+      </div>
+      <button id="closeCartBtn" class="text-[#493629] hover:text-[#806348] p-1">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Alerta de Combo -->
+    <div id="cartComboAlert" class="hidden px-4 py-2.5 bg-[#806348] text-[#FAF6ED] text-xs font-semibold"></div>
+
+    <!-- Items -->
+    <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
+
+    <!-- Estado Vacío -->
+    <div id="cartEmptyState" class="hidden flex-1 flex flex-col items-center justify-center p-8 text-center">
+      <p class="font-ad-headline text-xl text-[#493629] mb-2">Carrito Vacío</p>
+      <p class="text-xs text-stone-700 mb-6 font-medium">Aún no agregaste ningún boardshort.</p>
+      <button onclick="cart.closeDrawer()" class="btn-vintage-dark text-xs">
+        Ver Modelos
+      </button>
+    </div>
+
+    <!-- Footer Carrito -->
+    <div id="cartFooter" class="p-4 border-t-2 border-[#493629] bg-[#E8DDC5] space-y-3">
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <input 
+          type="text" 
+          id="checkoutNameInput" 
+          placeholder="Nombre y Apellido" 
+          class="border-2 border-[#493629] bg-[#FAF6ED] px-2.5 py-1.5 text-xs focus:outline-none focus:border-[#806348]"
+        />
+        <input 
+          type="text" 
+          id="checkoutCityInput" 
+          placeholder="Localidad" 
+          class="border-2 border-[#493629] bg-[#FAF6ED] px-2.5 py-1.5 text-xs focus:outline-none focus:border-[#806348]"
+        />
+      </div>
+
+      <div class="space-y-1.5 text-xs pt-2 border-t border-[#C6B18E]">
+        <div class="flex justify-between">
+          <span class="text-stone-700 font-semibold">Subtotal</span>
+          <span id="cartSubtotalAmount" class="font-bold text-[#493629]">$0</span>
+        </div>
+        <div id="cartDiscountRow" class="flex justify-between text-[#806348] font-bold hidden">
+          <span>Descuento Combo</span>
+          <span id="cartDiscountAmount">-$0</span>
+        </div>
+        <div class="flex justify-between text-base font-bold text-[#493629] pt-2 border-t-2 border-[#493629]">
+          <span>Total</span>
+          <span id="cartTotalAmount">$0</span>
+        </div>
+      </div>
+
+      <button 
+        id="btnCheckoutWhatsApp" 
+        class="w-full btn-vintage-primary text-center text-xs py-3"
+      >
+        <span>Enviar Pedido por WhatsApp</span>
+      </button>
+
+      <p class="text-[11px] text-center text-stone-700 font-medium">
+        Se abrirá WhatsApp con el pedido listo para enviar a +54 9 11 7365-7992.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ================= BOTÓN FLOTANTE WHATSAPP ================= -->
+  <a 
+    href="https://wa.me/5491173657992?text=Hola%20Bella%20Vista!%20Tengo%20una%20consulta%20sobre%20los%20boardshorts." 
+    target="_blank" 
+    class="fixed bottom-6 right-6 z-40 bg-[#493629] hover:bg-[#806348] text-[#FAF6ED] p-3.5 border-2 border-[#24211D] shadow-vintage-offset flex items-center justify-center transition-colors"
+    aria-label="Consultar por WhatsApp"
+    title="WhatsApp: +54 9 11 7365-7992"
+  >
+    <i data-lucide="message-circle" class="w-5 h-5"></i>
+  </a>
+
+  <!-- Contenedor Toasts -->
+  <div id="toastContainer" class="fixed bottom-6 left-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
